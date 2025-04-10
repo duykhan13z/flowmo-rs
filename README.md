@@ -4,9 +4,10 @@ A simple CLI flowtimer for Mac and Linux 🍅
 
 
 ## Installation
-Just visit [Releases](https://github.com/duy103zxc/flowmors/releases) to grab the binary.
+Just visit [Releases](https://github.com/duy103zxc/flowmoo/releases) to grab the binary.
 
 ## Build from source
+
 Requirement: `cargo`
 
 ### Linux
