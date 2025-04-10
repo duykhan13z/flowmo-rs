@@ -3,9 +3,9 @@ use notify_rust::Notification;
 
 pub fn send(message: &str) -> Result<(), failure::Error> {
     Notification::new()
-        .summary("\u{1F345} pomors")
+        .summary("\u{1F345} Flowmoo")
         .body(message)
         .show()
-        .context("failed to show notification")?;
+        .context("Failed to show notification")?;
     Ok(())
 }
