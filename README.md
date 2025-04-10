@@ -8,8 +8,6 @@ Just visit [Releases](https://github.com/duy103zxc/flowmoo/releases) to grab the
 
 ## Build from source
 
-Requirement: `cargo`
-
 ### Linux
 
 ```bash
