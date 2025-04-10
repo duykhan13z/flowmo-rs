@@ -1,5 +1,4 @@
 # flowmors
-[![Actions Status](https://github.com/duy103zxc/flowmors/workflows/build/badge.svg)](https://github.com/duy103zxc/flowmors/actions)
 
 A simple CLI flowtimer for Mac and Linux 🍅
 
@@ -13,9 +12,9 @@ Requirement: `cargo`
 ### Linux
 
 ```bash
-git clone https://github.com/duy103zxc/flowmors/
-cd flowmors/
-cargo build --release && mv target/release/flowmors ~/.local/bin/
+git clone https://github.com/duy103zxc/flowmoo/
+cd flowmoo/
+cargo build --release && mv target/release/flowmoo ~/.local/bin/
 ```
 
 ## Usage
@@ -25,4 +24,4 @@ flowmors
 ```
 
 ## License
-MIT
+Unlicense

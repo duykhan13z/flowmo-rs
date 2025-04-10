@@ -1,9 +1,9 @@
 [package]
 name = "flowmoo"
-version = "0.2.3"
-authors = ["yuizho <yuizho3@gmail.com>", "duykhanh471"]
+version = "0.1"
+authors = ["duykhanh471"]
 edition = "2021"
-license = "MIT"
+license = "Unlicense"
 description = "A simple CLI timer using flowtime technique."
 readme = "README.md"
 keywords = ["cli", "pomodoro"]
