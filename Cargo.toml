@@ -13,5 +13,5 @@ categories = ["command-line-utilities"]
 failure = "0.1.8"
 exitfailure = "0.5.1"
 spin_sleep = "1.0.0"
-termion = "1.5.5"
+termion = "4.0.5"
 notify-rust = "4.0.0"

@@ -1,9 +1,9 @@
 # flowmors
 
-A simple CLI flowtimer for Mac and Linux 🍅
-
+A simple CLI flowtimer for Linux and Windows 🍅
 
 ## Installation
+
 Just visit [Releases](https://github.com/duy103zxc/flowmoo/releases) to grab the binary.
 
 ## Build from source
