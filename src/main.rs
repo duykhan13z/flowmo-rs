@@ -15,10 +15,11 @@ fn main() -> Result<(), ExitFailure> {
     // start key handler on another thread
     let receiver = key_handler::run();
     // start timer
-    let mut stdout = stdout().into_raw_mode().unwrap();
+    let mut stdout = stdout().into_raw_mode()?;
     let mut round: u64 = 1;
     let mut start_time = Instant::now();
     loop {
+        view::release_raw_mode(&mut stdout)?;
         // work timer
         if start_timer(
             start_time.elapsed().as_secs(),
@@ -32,13 +33,8 @@ fn main() -> Result<(), ExitFailure> {
         }
 
         notification::send("Taking a break \u{2615}")?;
-        view::flush_break_interval(&mut stdout)?;
 
-        // break interval
-        if handle_input_on_interval(&mut stdout, &receiver)? {
-            return Ok(());
-        }
-
+        // Break Timer
         if start_timer(
             start_time.elapsed().as_secs() / 5,
             round,
@@ -50,7 +46,8 @@ fn main() -> Result<(), ExitFailure> {
             return Ok(());
         }
 
-        notification::send("Working time!!! \u{1F4AA}")?;
+        notification::send("It's time to start working \u{1F4AA}")?;
+        
         // work interval
         view::flush_work_interval(&mut stdout)?;
         if handle_input_on_interval(&mut stdout, &receiver)? {
@@ -80,7 +77,7 @@ fn start_timer(
                 quited = true;
                 break;
             }
-            key_handler::KeyAction::Pause => paused = !paused,
+            key_handler::KeyAction::Pause => if counting { paused = !paused } else { },
             key_handler::KeyAction::Ok => {
                 view::release_raw_mode(stdout)?;
                 break;
@@ -125,6 +122,11 @@ fn handle_input_on_interval(
             key_handler::KeyAction::Ok => {
                 view::release_raw_mode(stdout)?;
                 return Ok(false); 
+            },
+
+            key_handler::KeyAction::Pause => {
+                view::release_raw_mode(stdout)?;
+                // return Ok(false); 
             },
 
             key_handler::KeyAction::Quit => {

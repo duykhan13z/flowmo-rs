@@ -22,5 +22,11 @@ cargo build --release && mv target/release/flowmoo ~/.local/bin/
 flowmors
 ```
 
+Keybindings:
+
+- `q`: Exit
+- `Space`: Pause (Won't work on Break Timer)
+- `Enter`: Skip Work/Break Timer. 
+
 ## License
 Unlicense

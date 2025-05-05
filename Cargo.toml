@@ -1,12 +1,11 @@
 [package]
-name = "flowmoo"
-version = "0.1.3"
+name = "flomodoro-rs"
 authors = ["duykhanh471"]
 edition = "2021"
 license = "Unlicense"
-description = "A simple CLI timer using flowtime technique"
+description = "A simple CLI timer using flowtime technique, written in Rust"
 readme = "README.md"
-keywords = ["cli", "pomodoro"]
+keywords = ["cli", "pomodoro", "flomodoro"]
 categories = ["command-line-utilities"]
 
 [dependencies]
